@@ -48,5 +48,5 @@ The model can be utilized by hospitals as a first level of scrutinization. Initi
 
 
 ## Application Flow
-![Application Flow Overview](https://github.com/N1RM4L13/ThyroidDetection/blob/2e3c749df283bfae895f8256fd51398eae4772fa/assets/FlowDiagram.png)
+<img src="assets\FlowDiagram.png" alt="Thyroid Classification Overview" width="500" height="300">
 
