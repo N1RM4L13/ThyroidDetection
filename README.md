@@ -48,5 +48,5 @@ The model can be utilized by hospitals as a first level of scrutinization. Initi
 
 
 ## Application Flow
-<img src="assets\FlowDiagram.png" alt="Thyroid Classification Overview" width="500" height="300">
+<img src="assets\FlowDiagram.png" alt="Thyroid Classification Overview" width="600" height="600">
 
