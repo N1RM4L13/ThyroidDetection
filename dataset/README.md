@@ -1,0 +1,35 @@
+## Dataset Description
+
+- age: Age of the patient.
+- sex: Gender of the patient (M/F).
+- on_thyroxine: Whether the patient is on thyroxine treatment (t/f).
+- query_on_thyroxine: Inquiry if the patient is on thyroxine (t/f).
+- on_antithyroid_medication: Whether the patient is on
+- anti-thyroid medication (t/f).
+- sick: Whether the patient has been sick (t/f).
+- pregnant: Whether the patient is pregnant (t/f).
+- thyroid_surgery: Whether the patient has undergone thyroid surgery (t/f).
+- I131_treatment: History of radioactive iodine treatment (t/f).
+- query_hypothyroid: Inquiry about hypothyroid symptoms (t/f).
+- query_hyperthyroid: Inquiry about hyperthyroid symptoms (t/f).
+- lithium: Whether the patient is on lithium treatment (t/f).
+- goitre: Presence of goitre (t/f).
+- tumor: History of a tumor (t/f).
+- hypopituitary: Presence of hypopituitarism (t/f).
+- psych: History of psychological disorders (t/f).
+- TSH_measured: Whether TSH (Thyroid Stimulating Hormone) was
+- measured (t/f).
+- TSH: TSH level.
+- T3_measured: Whether T3 hormone was measured (t/f).
+- T3: T3 hormone level.
+- TT4_measured: Whether TT4 hormone was measured (t/f).
+- TT4: Total T4 hormone level.
+- T4U_measured: Whether T4 uptake was measured (t/f).
+- T4U: T4 uptake value.
+- FTI_measured: Whether FTI (Free Thyroxine Index) was measured (t/f).
+- FTI: Free Thyroxine Index.
+- TBG_measured: Whether TBG (Thyroxine Binding Globulin) was
+- measured (t/f).
+- TBG: TBG level.
+- referral_source: Source of patient referral.
+- Class: Target variable indicating thyroid condition (e.g., negative, hypothyroid, hyperthyroid).
