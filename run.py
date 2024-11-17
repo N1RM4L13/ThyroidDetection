@@ -4,12 +4,6 @@ from training.training_Validation_Insertion import train_validation
 from prediction.prediction_Validation_Insertion import pred_validation
 from prediction.predictModel import prediction
 
-
-
-
-
-
-
 def trainRouteClient(folderPath):
 
     try:
