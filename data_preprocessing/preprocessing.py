@@ -59,7 +59,7 @@ class Preprocessor:
 
     def dropUnnecessaryColumns(self,data,columnNameList):
         """
-                        Method Name: is_null_present
+                        Method Name: dropUnnecessaryColumns
                         Description: This method drops the unwanted columns as discussed in EDA section.
         """
         data = data.drop(columnNameList,axis=1)
@@ -69,7 +69,7 @@ class Preprocessor:
     def replaceInvalidValuesWithNull(self,data):
 
         """
-                               Method Name: is_null_present
+                               Method Name: replaceInvalidValuesWithNull
                                Description: This method replaces invalid values i.e. '?' with null, as discussed in EDA.
 
                                        """
@@ -118,7 +118,7 @@ class Preprocessor:
 
      # We can map the categorical values like below:
      data['sex'] = data['sex'].map({'F': 0, 'M': 1})
-     
+
      # except for 'Sex' column all the other columns with two categorical data have same value 'f' and 't'.
      # so instead of mapping indvidually, let's do a smarter work
      for column in data.columns:
@@ -176,19 +176,19 @@ class Preprocessor:
 
     def handleImbalanceDataset(self,X,Y):
         """
-                                                      Method Name: handleImbalanceDataset
-                                                      Description: This method handles the imbalance in the dataset by oversampling.
-                                                      Output: A Dataframe which is balanced now.
-                                                      On Failure: Raise Exception
+            Method Name: handleImbalanceDataset
+            Description: This method handles the imbalance in the dataset by oversampling.
+            Output: A Dataframe which is balanced now.
+            On Failure: Raise Exception
 
                                    """
 
 
 
         rdsmple = RandomOverSampler()
-        x_sampled, y_sampled = rdsmple.fit_sample(X, Y)
-
+        x_sampled, y_sampled = rdsmple.fit_resample(X, Y)
         return x_sampled,y_sampled
+    
     def impute_missing_values(self, data):
         """
                                         Method Name: impute_missing_values

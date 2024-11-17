@@ -1,6 +1,8 @@
 
 from training.trainingModel import trainModel
 from training.training_Validation_Insertion import train_validation
+from prediction.prediction_Validation_Insertion import pred_validation
+from prediction.predictModel import prediction
 
 
 
@@ -12,14 +14,11 @@ def trainRouteClient(folderPath):
 
     try:
             train_valObj = train_validation(folderPath) #object initialization
-            print("Done1")
             train_valObj.train_validation()#calling the training_validation function
-            print("Done2")
 
             trainModelObj = trainModel() #object initialization
-            print("Done3")
             trainModelObj.trainingModel() #training the model for the files in the table
-            print("Done4")
+
     except ValueError:
 
         return "Error Occurred! %s" % ValueError
@@ -31,8 +30,28 @@ def trainRouteClient(folderPath):
     except Exception as e:
 
         return "Error Occurred! %s" % e
-    print("Done")
     return "Training successfull!!"
 
+
+def predictRouteClient(path):
+    try:
+
+            pred_val = pred_validation(path) #object initialization
+
+            pred_val.prediction_validation() #calling the prediction_validation function
+
+            pred = prediction(path) #object initialization
+
+            # predicting for dataset present in database
+            path = pred.predictionFromModel()
+            print("Prediction File created at %s!!!" % path)
+
+    except ValueError:
+        print("Error Occurred! %s" %ValueError)
+    except KeyError:
+        print("Error Occurred! %s" %KeyError)
+    except Exception as e:
+        print("Error Occurred! %s" %e)
+
 if __name__ == "__main__":
-     trainRouteClient("Training_Batch_Files")
+     predictRouteClient("Prediction_Batch_Files")

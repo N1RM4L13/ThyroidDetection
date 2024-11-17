@@ -20,7 +20,7 @@ class Prediction_Data_validation:
 
     def __init__(self,path):
         self.Batch_Directory = path
-        self.schema_path = 'schema_prediction.json'
+        self.schema_path = 'prediction\schema_prediction.json'
         self.logger = App_Logger()
 
 
