@@ -118,13 +118,13 @@ class Preprocessor:
 
      # We can map the categorical values like below:
      data['sex'] = data['sex'].map({'F': 0, 'M': 1})
-
+     
      # except for 'Sex' column all the other columns with two categorical data have same value 'f' and 't'.
      # so instead of mapping indvidually, let's do a smarter work
      for column in data.columns:
          if len(data[column].unique()) == 2:
              data[column] = data[column].map({'f': 0, 't': 1})
-
+    
      # this will map all the rest of the columns as we require. Now there are handful of column left with more than 2 categories.
      # we will use get_dummies with that.
      data = pd.get_dummies(data,columns=['referral_source'])

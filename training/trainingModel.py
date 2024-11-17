@@ -22,7 +22,7 @@ class trainModel:
             # Getting the data from the source
             data_getter=data_loader.Data_Getter(self.file_object,self.log_writer)
             data=data_getter.get_data()
-
+            print("Hello")
 
             """doing the data preprocessing"""
 
@@ -33,19 +33,18 @@ class trainModel:
             data = preprocessor.dropUnnecessaryColumns(data,['TSH_measured','T3_measured','TT4_measured','T4U_measured','FTI_measured','TBG_measured','TBG','TSH'])
 
             #repalcing '?' values with np.nan as discussed in the EDA part
-
             data = preprocessor.replaceInvalidValuesWithNull(data)
 
             # get encoded values for categorical data
-
             data = preprocessor.encodeCategoricalValues(data)
-
+            
             # create separate features and labels
             X,Y=preprocessor.separate_label_feature(data,label_column_name='Class')
-
+            
+            #Checked till here
             # check if missing values are present in the dataset
             is_null_present=preprocessor.is_null_present(X)
-
+            print("F")
 
             # if missing values are there, replace them appropriately.
             if(is_null_present):
